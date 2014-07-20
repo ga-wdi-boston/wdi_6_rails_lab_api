@@ -17,28 +17,39 @@ This is a simple API for a Blog. It will have User, Article and Comment resource
 Each of us will be creating a new API project by following the directions below. 
 
 
-#### Lab 
+#### Demo - Code Along 
 
-Run this project:
+* Run this project, __this is the completed API we will be creating__.
 
-```
-rake db:create
-rake db:migrate
-rake db:seed
-rails server 
+	```
+	rake db:create
+	rake db:migrate
+	rake db:seed
+	rails server 
+	```
 
-```
+* Install the Chrome Extensions, [JSON Prettfier](http://goo.gl/0ueVkS), [Postman Chrome Extension](http://goo.gl/daZ5Q) and [Postman Launcher](https://chrome.google.com/webstore/detail/postman-launcher/igofndmniooofoabmmpfonmdnhgchoka/related).  
 
-Install the Chrome Extensions, [JSON Prettfier](http://goo.gl/0ueVkS) and [Poster Chrome Extension](http://goo.gl/FIfCji).  
+* In Chrome go to [localhost](http://localhost:3000) to show all the Articles and their Comments. 
 
-In Chrome go to [localhost](http://localhost:3000) to show all the Articles and their Comments. 
+### Lab
+
+Using _curl_ or _postman_   
+_For all the above view the rails server log and use the rails console to verify._
+ 
+* Show all the articles
+* Show the article with id = 3
+* Create a new article.
+* Delete an article
+
+See "man curl", [Curl Cheat Sheet](curl_cheat.txt) and [Curl API](curl_for_api.txt) for curl info.
 
 #### Demo
 
 
- Create a JSON API that will allow _Users_ to _Comment_ on _Articles_.
+Your turn to Create a JSON API that will allow _Users_ to _Comment_ on _Articles_.
 
-* cd into your favorite directory, or maybe second favorite.  
+* cd into a directory that will contain this new app.
 
 * Install the rails-api gem  
   ``gem install rails-api`` 
@@ -134,9 +145,23 @@ Why don't we need the new and edit action?
 
 
 
-#### Lab
+#### Lab  
+* Check this API using _curl_ or _postman_ 
+_For all the above view the rails server log and use the rails console to verify._
+ 
+	* Show all the articles
+	* Show the article with id = 3
+	* Create a new article.
+	* Delete an article
 
-Read [JSON API with rails-api and active_model_serializers](http://adamniedzielski.github.io/blog/2014/03/02/json-api-with-rails-api-and-active-model-serializers/)
+	See "man curl", [Curl Cheat Sheet](curl_cheat.txt) and [Curl API](curl_for_api.txt) for curl info.
+
+* Read [JSON API with rails-api and active_model_serializers](http://adamniedzielski.github.io/blog/2014/03/02/json-api-with-rails-api-and-active-model-serializers/).
+
+* What is rails middleware? 
+	
+* Identify at least three reasons why one would prefer using rails-api over rails.
+
 
 #### Demo
 Change the JSON representation for Articles and Comments.
