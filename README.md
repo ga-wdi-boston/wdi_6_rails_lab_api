@@ -186,9 +186,11 @@ Change the JSON representation for Articles and Comments.
 	
  Add this to the Articles controller.
  
+	```
 	def default_serializer_options
-    {root: false}
-  end
+    	{root: false}
+	end
+	```
 
 
 * Lets embed comments for each article in the JSON.
@@ -204,9 +206,11 @@ Now the comment only show it's id and body.
 * Lets show the comment creator and user that commented. Add this to the Comment serializer.  
 	``attributes :id, :body, :creator``
 
+	   ```
 	   def creator
-    "#{object.user.email}"
-  end
+    	   "#{object.user.email}"
+	   end
+	   ```
 	 
 #### Lab 
 Create a JSON API for a Song Playlist. A _Song_ will have a title, artist, duration and price. An _User_ will have a name and email. A _Playlist_ will be a join btw Songs and Users.
