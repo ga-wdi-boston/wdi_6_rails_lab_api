@@ -167,7 +167,7 @@ _For all the above view the rails server log and use the rails console to verify
 Change the JSON representation for Articles and Comments.
 
 * Add the active_model_serializers gem to the Gemfile and bundle.
-	``gem 'active_model_serializers`` 
+	``gem 'active_model_serializers'`` 
 
 * Generate a serializer for the Article resource.  
 	``rails g serializer article``
@@ -186,9 +186,9 @@ Change the JSON representation for Articles and Comments.
 	
  Add this to the Articles controller.
  
-	def default_serializer_options  
-	  {root: false}
-	end
+	def default_serializer_options
+    {root: false}
+  end
 
 
 * Lets embed comments for each article in the JSON.
@@ -204,9 +204,9 @@ Now the comment only show it's id and body.
 * Lets show the comment creator and user that commented. Add this to the Comment serializer.  
 	``attributes :id, :body, :creator``
 
-	  def creator
-    	"#{object.user.email}"
-	  end
+	   def creator
+    "#{object.user.email}"
+  end
 	 
 #### Lab 
 Create a JSON API for a Song Playlist. A _Song_ will have a title, artist, duration and price. An _User_ will have a name and email. A _Playlist_ will be a join btw Songs and Users.
